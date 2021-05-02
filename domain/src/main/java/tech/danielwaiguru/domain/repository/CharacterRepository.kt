@@ -5,5 +5,5 @@ import tech.danielwaiguru.domain.models.Character
 
 interface CharacterRepository {
     suspend fun getCharacters(): Flow<List<Character>>
-    suspend fun getCharacterDetails(): Flow<Character>
+    suspend fun getCharacterDetails(id: Int): Flow<Character>
 }

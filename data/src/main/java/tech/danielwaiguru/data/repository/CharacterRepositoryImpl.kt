@@ -9,7 +9,7 @@ class CharacterRepositoryImpl: CharacterRepository {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getCharacterDetails(): Flow<Character> {
+    override suspend fun getCharacterDetails(id: Int): Flow<Character> {
         TODO("Not yet implemented")
     }
 }

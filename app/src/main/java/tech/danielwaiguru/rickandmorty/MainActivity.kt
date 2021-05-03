@@ -9,6 +9,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
+import tech.danielwaiguru.rickandmorty.ui.navigation.Navigation
 import tech.danielwaiguru.rickandmorty.ui.theme.RickAndMortyTheme
 
 @AndroidEntryPoint
@@ -17,24 +18,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             RickAndMortyTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                InitApp()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun InitApp() {
+    Navigation()
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     RickAndMortyTheme {
-        Greeting("Android")
+
     }
 }

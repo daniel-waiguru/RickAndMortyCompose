@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun SearchMenuBar(
     modifier: Modifier = Modifier,
-    hint: String,
+    hint: String = "",
     onSearch: (String) -> Unit = {}
 ) {
     var searchQuery by remember {
@@ -45,7 +45,7 @@ fun SearchMenuBar(
                 .fillMaxWidth()
                 .shadow(5.dp, CircleShape)
                 .background(Color.White, CircleShape)
-                .padding(16.dp)
+                .padding(horizontal = 16.dp, vertical = 12.dp)
                 .onFocusChanged {
                     isHintDisplayed = it != FocusState.Active
                 }
@@ -54,7 +54,7 @@ fun SearchMenuBar(
             Text(
                 text = hint,
                 color = Color.LightGray,
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp)
             )
         }
     }

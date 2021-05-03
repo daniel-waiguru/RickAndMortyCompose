@@ -18,7 +18,7 @@ fun Navigation() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "characters") {
+        startDestination = "character_list_screen") {
         composable("character_list_screen") {
             CharacterListScreen(navController = navController)
         }

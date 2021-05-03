@@ -28,7 +28,10 @@ fun CharacterListScreen(navController: NavController) {
                 contentDescription = stringResource(R.string.morty_logo),
                 modifier = Modifier
                     .fillMaxWidth()
+                    .height(40.dp)
+                    .width(60.dp)
                     .align(CenterHorizontally)
+
             )
             SearchMenuBar(
                 hint = stringResource(R.string.search_hint),

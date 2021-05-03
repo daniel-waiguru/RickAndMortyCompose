@@ -11,6 +11,7 @@ import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
 import tech.danielwaiguru.rickandmorty.common.Constants.CHARACTER_ID
 import tech.danielwaiguru.rickandmorty.common.Constants.DOMINANT_COLOR
+import tech.danielwaiguru.rickandmorty.ui.chacter_list.CharacterListScreen
 
 @Composable
 fun Navigation() {
@@ -19,7 +20,7 @@ fun Navigation() {
         navController = navController,
         startDestination = "characters") {
         composable("character_list_screen") {
-
+            CharacterListScreen(navController = navController)
         }
         composable(
             "character_details_screen/{DOMINANT_COLOR}/{CHARACTER_ID}",

@@ -3,7 +3,6 @@ package tech.danielwaiguru.rickandmorty.ui.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.NavArgument
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,7 +10,7 @@ import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
 import tech.danielwaiguru.rickandmorty.common.Constants.CHARACTER_ID
 import tech.danielwaiguru.rickandmorty.common.Constants.DOMINANT_COLOR
-import tech.danielwaiguru.rickandmorty.ui.chacter_list.CharacterListScreen
+import tech.danielwaiguru.rickandmorty.ui.character_list.CharacterListScreen
 
 @Composable
 fun Navigation() {

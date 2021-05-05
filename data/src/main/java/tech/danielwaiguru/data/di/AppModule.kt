@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import tech.danielwaiguru.data.mappers.CharacterMapper
 import tech.danielwaiguru.domain.repository.CharacterRepository
 import tech.danielwaiguru.domain.use_cases.GetCharacterDetailsUseCase
 import tech.danielwaiguru.domain.use_cases.GetCharactersUseCase
@@ -22,4 +23,7 @@ object AppModule {
     fun provideGetCharacterDetails(characterRepo: CharacterRepository): GetCharacterDetailsUseCase{
         return GetCharacterDetailsUseCase(characterRepo)
     }
+    @Provides
+    @Singleton
+    fun provideEntityMapper(): CharacterMapper = CharacterMapper()
 }

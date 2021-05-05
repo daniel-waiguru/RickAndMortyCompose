@@ -1,4 +1,4 @@
-package tech.danielwaiguru.rickandmorty.ui.character_list
+package tech.danielwaiguru.rickandmorty.views.character_list
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -12,7 +12,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import tech.danielwaiguru.rickandmorty.R
-import tech.danielwaiguru.rickandmorty.ui.composable.SearchMenuBar
+import tech.danielwaiguru.rickandmorty.views.composable.DisplayCharacters
+import tech.danielwaiguru.rickandmorty.views.composable.SearchMenuBar
+
 
 @Composable
 fun CharacterListScreen(navController: NavController) {
@@ -40,6 +42,7 @@ fun CharacterListScreen(navController: NavController) {
             ){
                 //Delegate the search Query to viewModel
             }
+            DisplayCharacters(navController = navController)
         }
     }
 }

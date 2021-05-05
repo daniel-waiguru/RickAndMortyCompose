@@ -1,4 +1,4 @@
-package tech.danielwaiguru.rickandmorty.ui.composable
+package tech.danielwaiguru.rickandmorty.views.composable
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

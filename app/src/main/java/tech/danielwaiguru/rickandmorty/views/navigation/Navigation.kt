@@ -1,5 +1,6 @@
-package tech.danielwaiguru.rickandmorty.ui.navigation
+package tech.danielwaiguru.rickandmorty.views.navigation
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
@@ -10,11 +11,13 @@ import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
 import tech.danielwaiguru.rickandmorty.common.Constants.CHARACTER_ID
 import tech.danielwaiguru.rickandmorty.common.Constants.DOMINANT_COLOR
-import tech.danielwaiguru.rickandmorty.ui.character_list.CharacterListScreen
+import tech.danielwaiguru.rickandmorty.views.character_list.CharacterListScreen
+
 
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
+    //val viewModel: CharacterViewModel  = viewModel()
     NavHost(
         navController = navController,
         startDestination = "character_list_screen") {

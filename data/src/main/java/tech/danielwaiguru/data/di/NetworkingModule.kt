@@ -33,6 +33,7 @@ object NetworkingModule {
         .baseUrl(BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create().asLenient())
         .build()
+
     @Singleton
     @Provides
     fun provideApiService(retrofit: Retrofit): ApiService =

@@ -22,7 +22,7 @@ class CharacterViewModel @Inject constructor(
     init {
         getAllCharacters()
     }
-    private fun getAllCharacters() {
+    fun getAllCharacters() {
         viewModelScope.launch {
             characterListUseCase.invoke()
                 .onStart {

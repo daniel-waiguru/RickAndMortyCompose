@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import tech.danielwaiguru.rickandmorty.R
 
 @Composable
-fun ShowError(text: String, onButtonClick: () -> Unit) {
+fun ShowError(onButtonClick: () -> Unit) {
     Column {
         Image(
             painter = painterResource(id = R.drawable.error),
